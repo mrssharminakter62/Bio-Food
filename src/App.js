@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createContext, useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,13 +8,22 @@ import {
 import './App.css';
 import Admin from "./Components/Admin/Admin";
 import Deals from "./Components/Deals/Deals";
+import FoodDetail from "./Components/FoodDetails/FoodDetail";
 import Header from "./Components/Header/Header";
+import Login from "./Components/Login/Login";
 import Home from "./Components/Home/Home";
+
 import NotFound from "./Components/NotFound/NotFound";
 import Orders from "./Components/Orders/Orders";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import AddProduct from "./Components/AddProduct/AddProduct";
+
+export const UserContext = createContext()
 
 function App() {
+  const [loggedInUser, setLoggedInuser] = useState({});
   return (
+    <UserContext.Provider value= {[loggedInUser, setLoggedInuser]}>
    <Router>
      <Header></Header>
      <Switch>
@@ -30,16 +39,25 @@ function App() {
       <Route path="/admin">
         <Admin></Admin>
     </Route>
+    <Route path="/login">
+      <Login></Login>
+    </Route>
+    <PrivateRoute path="/food/:id">
+       <FoodDetail></FoodDetail>
+    </PrivateRoute>
     <Route path="/deals">
     <Deals></Deals>
+    </Route>
+    
+    <Route path="/add">
+      <AddProduct></AddProduct>
     </Route>
     <Route path="*">
         <NotFound></NotFound>
        </Route>
      </Switch>
-
-
    </Router>
+   </UserContext.Provider>
   );
 }
 
