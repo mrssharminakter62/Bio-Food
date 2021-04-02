@@ -33,7 +33,7 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div style={{border:'1px solid black',height:'500px', width:'500px', margin:'100px 400px '}}>
              <button onClick={handleGoogleSignIn}>Google Sign in</button>
              <Form>
   <Form.Group controlId="formBasicEmail">

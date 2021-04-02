@@ -1,24 +1,24 @@
 
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import axios from 'axios';
 import { useForm } from "react-hook-form";
-
-
+import { UserContext } from '../../App';
 
 
 const AddProduct = () => {
-
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const { register, handleSubmit, watch, errors } = useForm();
     const [imageURL, setIMageURL] = useState(null);
 
     const onSubmit = data => {
-        const foodData = {
+        const productData = {
           name: data.name,
           weight:data.weight,
           price: data.price,
           imageURL: imageURL
         };
+        const foodData ={...loggedInUser, ...productData}
         const url = `http://localhost:4500/addProduct`;
         
         fetch(url, {
@@ -48,7 +48,7 @@ const AddProduct = () => {
     }
     
     return (
-        <div>
+        <Container style={{border:'1px solid black', marginLeft:'500px',width:'800px', marginTop:'200px', textAlign:'center', padding:'5px'}}>
                 <h3 style={{fontWeight:'bold', marginBottom:'40px'}}>Add Product</h3>
                     <form onSubmit={handleSubmit(onSubmit)}>
                           <Row>
@@ -77,7 +77,7 @@ const AddProduct = () => {
                               </Row>
                               <Button variant="primary" className="mt-4" type="submit">Submit</Button>                               
                     </form>
-        </div>  
+        </Container>  
     );
 };
 
