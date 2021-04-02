@@ -19,7 +19,7 @@ const AddProduct = () => {
           imageURL: imageURL
         };
         const foodData ={...loggedInUser, ...productData}
-        const url = `http://localhost:4500/addProduct`;
+        const url = `https://mighty-cove-62078.herokuapp.com/addProduct`;
         
         fetch(url, {
           method: 'POST', 
@@ -75,7 +75,7 @@ const AddProduct = () => {
                                     <input name="exampleRequired" type="file"  onChange={handleImageUpload}/>
                                 </Col>  
                               </Row>
-                              <Button variant="primary" className="mt-4" type="submit">Submit</Button>                               
+                              <Button variant="success" className="mt-4" type="submit">Submit</Button>                               
                     </form>
         </Container>  
     );

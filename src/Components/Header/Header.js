@@ -13,7 +13,7 @@ const Header = () => {
             <Link to="/home" className= "link">Home</Link>
             <Link to="/orders" className= "link">Orders</Link>
             <Link to="/admin" className= "link">Admin</Link>
-            <Link className="btn-book link" to="/login">Deals</Link>
+            <Link to="/deals" className= "link">Deals</Link>
     </Nav>
   </Navbar.Collapse>
 </Navbar>

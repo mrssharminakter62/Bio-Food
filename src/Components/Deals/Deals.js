@@ -3,7 +3,7 @@ import React from 'react';
 const Deals = () => {
     return (
         <div>
-            <h3>comming soon</h3>
+            <h3 className="text-warning text-center mt-5">Comming soon</h3>
         </div>
     );
 };

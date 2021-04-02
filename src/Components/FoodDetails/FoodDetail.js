@@ -12,7 +12,7 @@ const FoodDetail = () => {
     const {name, weight, price} = checkOut;
 
     useEffect(()=>{
-        fetch(`http://localhost:4500/food/${id}`)
+        fetch(`https://mighty-cove-62078.herokuapp.com/food/${id}`)
         .then(res => res.json())
         .then(data => setCheckOut(data));
 
@@ -42,9 +42,7 @@ const FoodDetail = () => {
                         <tfoot>
                             <tr>
                                 <td>Total</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                               
                             </tr>
                         </tfoot>
                     </table>

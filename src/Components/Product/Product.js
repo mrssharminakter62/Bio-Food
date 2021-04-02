@@ -6,7 +6,7 @@ import Delete from '../../icons/Group 33150.png';
 const Product = ({product}) => {
   
     const handleClick =(id)=>{
-        fetch(`http://localhost:4500/delete/${id}`,{
+        fetch(`https://mighty-cove-62078.herokuapp.com/delete/${id}`,{
             method:'DELETE'
         })
         .then(res => res.json())

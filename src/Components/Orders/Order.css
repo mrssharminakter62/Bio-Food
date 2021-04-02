@@ -1,0 +1,26 @@
+.ship-form{
+    margin:30px 100px;
+}
+.ship-form input {
+    display: block;
+    margin-top: 30px;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 500px;
+}
+.error{
+    color: red;
+}
+.items{
+    border-bottom: 3px solid red;
+    width:300px;
+    font-weight: bold;
+    font-size: 25px;
+}
+.items-order{
+    margin-left: 300px;
+    margin-top: 150px;
+    font-weight: bold;
+    font-size: 25px;
+}
