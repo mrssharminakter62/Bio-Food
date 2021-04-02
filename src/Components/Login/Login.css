@@ -1,0 +1,41 @@
+ .signin-form{
+   
+    border: 1px solid gray;
+    width: 500px;
+    height: 320px;
+    text-align: left;
+    float: left;
+    margin: 20px 430px 0px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px gray;
+}
+/* .sign{
+    margin-left: 10px;
+}
+.user{
+    background-color:rgb(12, 162, 204);
+    border-radius: 5px;
+} */
+
+.google{
+    padding: 2px 5px;
+    margin: 20px 35px 5px 450px;
+    padding-right: 200px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.facebook{
+  margin-left: 450px;
+  margin-right: 35px;
+  padding-right: 185px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.or{
+   margin-left: 600px;
+    color:black;
+    font-size: 35px;
+    font-weight: bold;
+} 
