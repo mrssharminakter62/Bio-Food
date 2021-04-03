@@ -49,8 +49,21 @@ const Login = () => {
     var errorMessage = error.message;
     console.log(errorMessage);
   });
-      console.log('thankyou')
-    }
+     
+}
+  //   const handleSubmit = () =>{
+  //     firebase.auth().signInWithEmailAndPassword(email, password)
+  //     .then((userCredential) => {
+  //       var user = userCredential.user;
+  //       setLoggedInUser(user)
+  //       history.replace(from)
+  // })
+  // .catch((error) => {
+  //   var errorCode = error.code;
+  //   var errorMessage = error.message;
+  //   console.log("error")
+  // });
+  //   }
 
     return (
         <div>
@@ -62,7 +75,7 @@ const Login = () => {
              <h2 className="or">Or</h2>
              <div className="signin-form" >
                <div style={{margin:'25px 5px 5px 20px'}}>
-                 <Form on>
+                 <Form > 
                       <Form.Group controlId="formBasicEmail">
                         <Form.Label style={{fontSize:'20px', fontWeight:'bold'}}>Email address</Form.Label>
                           <Form.Control type="email" placeholder="Enter email" />

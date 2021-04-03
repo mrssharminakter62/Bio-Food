@@ -12,13 +12,15 @@ const Home = () => {
         .then(data => setFoods(data))
            
     }, [])
+
+
     return (
         <div className= "row">
             {
                 foods.length === 0 && <Spinner style={{margin:'30px 0px 0px 600px'}} animation="border" variant="success" />
             }
          {
-             foods.map(food => <Food food={food} key={food._id}></Food>)
+             foods.map(food => <Food  food={food} key={food._id}></Food>)
          }
         </div>
     );

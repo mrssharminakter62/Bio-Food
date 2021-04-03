@@ -18,7 +18,7 @@ const Product = ({product}) => {
     return (
          <div>
              <div> 
-               <Table >
+                 <Table >
                         <thead>
                             <tr>
                             <th>Manage Product</th>
